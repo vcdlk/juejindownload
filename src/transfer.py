@@ -19,7 +19,7 @@ def process_markdown_images(md_file_path, output_dir="output", image_dir="images
     image_path.mkdir(parents=True, exist_ok=True)
 
     # 读取原始 Markdown 内容
-    with open(md_file_path, 'r', encoding='utf-8') as f:
+    with open(md_file_path, 'r', encoding='utf-8', errors='ignore') as f:
         content = f.read()
 
     # 正则匹配所有图片链接
@@ -129,12 +129,12 @@ def get_file_extension(url):
 
 if __name__ == "__main__":
     # 使用示例
-    folder_path = "raw"
-    for filename in os.listdir(folder_path):
+    folder_path = "../raw"
+    for filename in os.listdir("../raw"):
         file_path = os.path.join(folder_path, filename)
         if os.path.isfile(file_path):
           process_markdown_images(
               md_file_path=file_path,
-              output_dir="processed_docs",
+              output_dir="../processed_docs",
               image_dir="assets/images"
           )

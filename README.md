@@ -1,4 +1,4 @@
-## 有啥用？
+### 有啥用？
 
 可以帮你下载掘金的课程成为 markdown 文档，并且把里面的图片链接保存到本地。(当然需要你有权限访问这个课程，比如购买对应的课程
 
@@ -13,7 +13,7 @@
 - 下载的文件保存到 `raw` 文件中，执行
 
   ```
-  python3 transfer.py
+  cd src && python3 transfer.py
   ```
   转换之后的markdown 和图片会保存在 `processed_docs`目录中
 
